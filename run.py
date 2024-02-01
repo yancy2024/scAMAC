@@ -171,10 +171,6 @@ if __name__ == '__main__':
         device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
         print(da)
 
-
-        with open("laa.txt", "a") as file:  # 只需要将之前的”w"改为“a"即可，代表追加内容
-            file.write(da + "\n")
-
         X = pd.read_csv(da, header=0,index_col=0,sep=',')
         X = np.array(X).T
         print(X.shape)
